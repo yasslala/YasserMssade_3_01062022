@@ -1,0 +1,400 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  margin: 0;
+}
+#page{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+.header{
+  display: flex;  
+  justify-content: center;
+}
+.header img{
+  height: 40px;
+  width: 200px;
+}
+
+.recherche{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 242, 242);
+  
+
+  .recherche__barre{
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 3px rgb(207, 207, 207);
+    
+    i{
+      font-size: 17px;
+    }
+    &--localisation{
+      margin-left: 20px;
+    }
+  }
+    &__titre{
+      text-align: center;
+      margin: 40px 20px 10px 20px;
+    }
+    &__phrase{
+      margin: 0 20px 0 20px;
+      text-align: center;
+    }
+    &--bouton{
+      width: 250px;
+      height: 50px;
+      border-radius: 50px 50px;      
+      background-color: $colour-secondary;
+      margin: 20px 0 50px 0;
+      padding: 15px 0 0 35px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 7px 7px 7px rgb(211, 211, 211);
+    }
+}
+@media all and (min-width: 768px){
+  .recherche{
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 0px 2px 2px rgb(196, 196, 196);
+  }
+}
+
+.fonctionnement{
+
+  &__titre{
+    padding-left: 15px;
+    padding-top: 30px;
+  }
+}
+@media all and (min-width: 768px){
+  .fonctionnement{
+    &__boutons{
+      display: flex;
+    }
+  }
+}
+
+.bouton{
+  display: flex;
+  align-items: center;
+  width: 94%;
+  height: 70px;
+  border-radius: 25px 25px;
+  margin: 0 auto 20px auto;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  box-shadow: 7px 7px 7px rgb(223, 223, 223);
+  
+
+  i{
+    padding-left: 30px;
+    color: gray;
+    font-size: 20px;
+  }
+  &--numero{
+    display: inline-block;
+    background-color: $colour-primary;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 3px 7px 3px 7px;
+    position: relative;
+    right: 10px;
+  }
+  &__texte{
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 17px;
+  }
+}
+@media all and (min-width: 768px){
+  .bouton{
+    width: 31%;
+
+    &--numero{
+      right: 5px;
+    }
+    i{
+      padding-left: 10px;
+    }
+  }
+}
+
+.restaurants{
+  background-color: rgb(243, 243, 243);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 60px;    
+
+  &__titre{
+    margin-left: 4%;
+    
+  }
+  &__cartes{
+    width: 92%;
+    margin: auto;
+    background-color: rgb(243, 243, 243);
+
+    &__carte{
+      background-color: white;
+      border-radius: 15px 15px;
+      margin-bottom: 20px;      
+      width: 100%;
+      height: 230px;
+      box-shadow: 0px 7px 7px rgb(223, 223, 223);
+    }
+  }
+  
+}
+@media all and (min-width: 992px){
+  .restaurants{
+    &__cartes{
+      display: flex;
+      flex-wrap: wrap;
+
+      &__carte{
+        width: 49%;
+        height: 400px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.lien{
+  text-decoration: none;
+
+  &__image{
+    position: relative;
+
+    &__photo{
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+    
+    &--nouveau{
+      position: absolute;
+      display: block;
+      padding: 7px 8px 7px 8px;
+      background-color: $colour-accent;
+      color: rgb(33, 124, 79);
+      font-weight: bold;
+      font-size: 14px;
+      top: 20px;
+      right: 20px;      
+    } 
+  }
+  &__description{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    color: black;
+    margin-top: 20px;
+
+    &__plat{
+      margin: 0;
+      padding: 0;
+    }
+    &__quartier{
+      margin: 0;
+      padding: 0;
+    }
+    i{
+      align-self: flex-end;
+      position: relative;
+      font-size: 30px;
+      bottom: 35px;
+      right: 25px;
+    }
+  }  
+}
+@media all and (min-width: 992px){
+  .lien{
+    &__image{
+      &__photo{
+        height: 320px;
+      }
+    }
+  }
+}
+
+.foot{
+  background-color: rgb(56, 56, 56);
+  color: white;
+  padding-bottom: 10px;
+
+  &__titre{
+    padding-left: 4%;
+    padding-top: 20px;
+    margin-top: 0;
+    font-family: 'Shrikhand', cursive ;
+    font-weight: lighter;
+  }
+  &__liste{
+    list-style-type: none;
+    padding-left: 4%;
+
+    &--lien{
+      padding-bottom: 5px;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    i{
+      padding-right: 10px;
+    }
+  }
+}
+@media all and (min-width: 768px){
+  footer ul{
+    display: flex;
+    flex-direction: row;
+    li{
+      margin-right: 40px;
+    }
+  }
+}
+
+/* Page la palette du goût */
+.header{
+  i{
+    font-size: 25px;
+    color: black;
+    position: relative;
+    right: 300%;
+    top: 37%;
+  }
+}
+
+.image{
+  &__photo{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+@media all and (min-width: 768px){
+  .image{
+    &__photo{
+    height: 375px;
+    }
+  }
+}
+@media all and (min-width: 992px){
+  .image{
+    &__photo{
+    height: 500px;
+    }
+  }
+}
+
+.selection{
+  background-color: rgb(243, 243, 243);
+  border-radius: 30px 30px 0 0;
+  position: relative;  
+  margin-top: -30px;
+  
+  &__resto{
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+    &__nom{
+      font-family: 'Shrikhand', cursive ;
+      margin-right: 40px;
+      font-size: 30px;
+    }
+    i{
+      font-size: 25px;
+    }
+  }
+  &__plats{
+    margin-bottom: 70px;
+  }
+}
+@media all and (min-width: 992px){
+  .selection{
+    display: flex;
+    flex-wrap: wrap;
+    &__resto{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__plats{
+      width: 50%;
+    }
+  }
+}
+
+.titre{
+  margin-left: 4%;
+}
+
+.choix{
+  background-color: white;
+  border-radius: 25px 25px;
+  box-shadow: 7px 7px 7px rgb(223, 223, 223);
+  width: 92%;
+  margin-left: 4%;
+  &__plat{
+    padding-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    font-size: 20px;   
+    }
+  &__description{
+    display: flex;
+    justify-content: space-between;
+    &__accompagnement{
+      margin-left: 15px;
+      margin-top: 8px;
+    }
+    &__prix{
+      margin-right: 25px;
+      margin-top: 8px;
+    }
+  }
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  &--commander{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px 50px;      
+    background-color: $colour-secondary;
+    margin: 0 0 70px;
+    padding: 3px 0 0 10px;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 7px 7px 7px rgb(211, 211, 211);
+    border: none;   
+  }
+}
+@media all and (min-width: 992px){
+  .btn{
+    margin-left: 15%;
+    margin-top: 180px;
+    &--commander{
+    height: 80px;
+    }
+  }
+}
