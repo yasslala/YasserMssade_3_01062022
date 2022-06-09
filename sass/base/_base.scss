@@ -479,7 +479,7 @@ body{
     transform: translateY(0);
   }
 }
-@for $i from 1 to 4 {
+@for $i from 1 to 5 {
   .n#{$i}{
     animation-delay: $i * 0.3s;
   }

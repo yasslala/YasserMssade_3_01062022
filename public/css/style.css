@@ -462,6 +462,10 @@ body {
   animation-delay: 0.9s;
 }
 
+.n4 {
+  animation-delay: 1.2s;
+}
+
 .btn {
   display: flex;
   justify-content: center;
