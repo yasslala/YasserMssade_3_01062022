@@ -1,0 +1,19 @@
+.header{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+  }
+  .header img{
+    height: 40px;
+    width: 200px;
+    display: block;
+  }
+
+  /*icone retour vers la page principal*/
+  .header{
+    i{
+      font-size: 25px;
+      color: black;
+      margin-right: 30px;
+    }
+  }

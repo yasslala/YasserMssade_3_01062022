@@ -1,0 +1,171 @@
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: disparition 0.5s linear 3s forwards;
+    overflow: auto;
+  
+    &__titre{
+    display: inline-block;
+    position: relative;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 900;
+    color: $colour-primary;
+    text-shadow: 0 0 20px $colour-primary;
+    top: 0px;
+    opacity: 0;
+    animation: flou 1s ease-in 2s forwards;
+    }
+  
+    &__contenu {
+      position: relative;
+      transform-origin: top right;
+      animation: saute 1s ease-out, remue 1s linear 1s, disparition 1s 2.8s forwards;
+    }
+  
+    &__ingredients {
+      position: absolute;
+      z-index: -1;
+      top: -5px;
+      width: 100%;
+      animation: saute 1s ease-out;
+    }
+  
+    &__poele{
+    display: block;
+    position: relative;
+    top: 0px;
+    width: 160px;
+    height: 32px; 
+    background-color: grey;
+    border-radius: 0 0 22px 22px;
+    transform-origin: top right;
+    
+    &::before{
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 20px;
+      left: 149px;
+      bottom: 21px;
+      background-color: gray;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 168px;
+      width: 60px;
+      height: 10px;
+      border-radius: 0 25px 25px 0;
+      background-color: brown;
+    }
+    }
+  
+    .fa-fish{
+      position: absolute;
+      color:  #e1dddc;
+      font-size: 40px;
+      top: -14px;
+      left: 7px;
+      z-index: -1;
+      animation: aliments 1s ease-in-out;
+    }
+    .fa-carrot{
+      position: absolute;
+      color: orange;
+      font-size: 40px;
+      transform: rotate(45deg);
+      left: 55px;
+      top: -14px;
+      z-index: -1;
+      animation: aliments 1s ease-in-out 0.1s;
+    }
+    .fa-bacon{
+      position: absolute;
+      display: block;
+      transform: rotate(45deg);
+      left: 100px;
+      top: -14px;
+      color: brown;
+      font-size: 40px;
+      z-index: -1;
+      animation: aliments 1s ease-in-out 0.1s;
+    }
+  }
+  @keyframes flou{
+    0% {
+      font-size: 100%;
+      top: 0px;
+      text-shadow: 0 0 20px whitesmoke;
+      opacity: 0;
+    }
+    50%{
+      font-size: 200%;
+      top: -100px;   
+    }
+    100% {
+      font-size: 300%;
+      top: -200px;
+      text-shadow: 0 0 0px whitesmoke;
+      opacity: 1;
+    }
+  }
+  @keyframes saute{
+    0% {
+      transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(25deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes remue{
+    0% {
+      transform: translateX(0px);
+    }
+    25%{
+      transform: translateX(20px);
+    }
+    50%{
+      transform: translateX(0px);
+    }
+    75%{
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes aliments {
+    0% {
+      top: -15px;
+      transform: rotate(45deg);   
+    }
+    50%{
+      top: -50px;
+      transform: rotate(225deg);    
+       }
+    100%{
+      top: -15px;
+      transform: rotate(405deg);
+      
+    }
+  }
+  @keyframes disparition {
+    100%{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
